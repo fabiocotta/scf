@@ -703,6 +703,13 @@ object FrmPrincipal: TFrmPrincipal
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
+      object Label5: TLabel
+        Left = 296
+        Top = 168
+        Width = 305
+        Height = 129
+        Caption = 'Label5'
+      end
     end
   end
 end
