@@ -11,7 +11,8 @@ object FrmPrincipal: TFrmPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
+  Position = poDesigned
+  WindowState = wsMaximized
   OnShow = FormShow
   TextHeight = 15
   object pnlTopo: TPanel
@@ -31,7 +32,6 @@ object FrmPrincipal: TFrmPrincipal
       Height = 73
       Align = alLeft
       BevelOuter = bvNone
-      Caption = 'Logo'
       Color = 4605510
       ParentBackground = False
       TabOrder = 0
@@ -53,8 +53,28 @@ object FrmPrincipal: TFrmPrincipal
         Height = 41
         Align = alTop
         BevelOuter = bvNone
-        Caption = 'pnlTitulo'
         TabOrder = 1
+        object lblTitulo: TLabel
+          AlignWithMargins = True
+          Left = 3
+          Top = 10
+          Width = 204
+          Height = 31
+          Margins.Top = 10
+          Margins.Bottom = 0
+          Align = alClient
+          Caption = 'ERP CAPELA'
+          Color = clWhite
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -19
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          ExplicitWidth = 102
+          ExplicitHeight = 25
+        end
       end
       object pnlDescricao: TPanel
         Left = 0
@@ -63,8 +83,27 @@ object FrmPrincipal: TFrmPrincipal
         Height = 33
         Align = alBottom
         BevelOuter = bvNone
-        Caption = 'pnlDescricao'
         TabOrder = 2
+        object lblDescricao: TLabel
+          AlignWithMargins = True
+          Left = 3
+          Top = 2
+          Width = 204
+          Height = 21
+          Margins.Top = 0
+          Margins.Bottom = 10
+          Align = alBottom
+          Caption = 'Gest'#227'o'
+          Color = clWhite
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Name = 'Segoe UI Light'
+          Font.Style = []
+          ParentColor = False
+          ParentFont = False
+          ExplicitWidth = 47
+        end
       end
     end
     object pnlUsuario: TPanel
@@ -196,8 +235,47 @@ object FrmPrincipal: TFrmPrincipal
       Height = 73
       Align = alLeft
       BevelOuter = bvNone
-      Caption = 'pnlVersao'
       TabOrder = 2
+      object Label3: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 0
+        Width = 179
+        Height = 25
+        Margins.Top = 0
+        Margins.Bottom = 10
+        Align = alTop
+        Caption = '[ Vers'#227'o ]'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -19
+        Font.Name = 'Segoe UI Light'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 72
+      end
+      object Label4: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 35
+        Width = 179
+        Height = 21
+        Margins.Top = 0
+        Margins.Bottom = 10
+        Align = alTop
+        Caption = '1.0.1.2'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Segoe UI Light'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 40
+      end
     end
   end
   object pnlMenu: TPanel
@@ -625,6 +703,13 @@ object FrmPrincipal: TFrmPrincipal
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
+      object Label5: TLabel
+        Left = 296
+        Top = 168
+        Width = 305
+        Height = 129
+        Caption = 'Label5'
+      end
     end
   end
 end

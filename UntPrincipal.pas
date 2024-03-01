@@ -45,7 +45,6 @@ type
     lblDescricao: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    Label5: TLabel;
     procedure btnSairClick(Sender: TObject);
     procedure btnClienteClick(Sender: TObject);
     procedure btnCapelaClick(Sender: TObject);

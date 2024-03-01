@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, System.Actions, Vcl.ActnList, System.ImageList,
+  Vcl.ImgList;
 
 type
   TFrmPrincipal = class(TForm)
@@ -40,6 +41,11 @@ type
     btnCemiterio: TSpeedButton;
     btnFuneraria: TSpeedButton;
     btnSair: TSpeedButton;
+    lblTitulo: TLabel;
+    lblDescricao: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure btnSairClick(Sender: TObject);
     procedure btnClienteClick(Sender: TObject);
     procedure btnCapelaClick(Sender: TObject);
@@ -60,6 +66,8 @@ implementation
 
 {$R *.dfm}
 
+uses UntCadCapela;
+
 procedure TFrmPrincipal.btnCapelaClick(Sender: TObject);
 begin
     GET_LineMenu(Sender);
@@ -73,6 +81,13 @@ end;
 procedure TFrmPrincipal.btnClienteClick(Sender: TObject);
 begin
     GET_LineMenu(Sender);
+    FrmCadBaseCapela := TFrmCadBaseCapela.Create(Self);
+    try
+      FrmCadBaseCapela.showmodal;
+
+    finally
+      FreeAndNil(FrmCadBaseCapela);
+    end;
 end;
 
 procedure TFrmPrincipal.btnFunerariaClick(Sender: TObject);
