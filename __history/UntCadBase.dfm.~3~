@@ -1,0 +1,15 @@
+object FrmCadBase: TFrmCadBase
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Formul'#225'rio de Cadastro - Base'
+  ClientHeight = 489
+  ClientWidth = 807
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+end

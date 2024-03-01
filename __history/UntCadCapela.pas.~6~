@@ -1,0 +1,41 @@
+unit UntCadCapela;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UntCadBase, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFrmCadBase1 = class(TFrmCadBase)
+    pnlTopo: TPanel;
+    pnlRodape: TPanel;
+    pnlIIcone: TPanel;
+    Image1: TImage;
+    pnlBtnSair: TPanel;
+    btnSair: TSpeedButton;
+    pnlTitulo: TPanel;
+    Label1: TLabel;
+    procedure btnSairClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadBase1: TFrmCadBase1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmCadBase1.btnSairClick(Sender: TObject);
+begin
+  inherited;
+  Self.Close;
+
+end;
+
+end.

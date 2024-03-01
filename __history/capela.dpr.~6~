@@ -1,0 +1,19 @@
+program capela;
+
+uses
+  Vcl.Forms,
+  UntPrincipal in 'UntPrincipal.pas' {FrmPrincipal},
+  UntDM in 'UntDM.pas' {DM: TDataModule},
+  UntCadBase in 'UntCadBase.pas' {FrmCadBase},
+  UntCadCapela in 'UntCadCapela.pas' {FrmCadBase1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmCadBase, FrmCadBase);
+  Application.CreateForm(TFrmCadBase1, FrmCadBase1);
+  Application.Run;
+end.

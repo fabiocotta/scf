@@ -1,0 +1,70 @@
+unit UntCadCapela;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UntCadBase, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFrmCadBase1 = class(TFrmCadBase)
+    pnlTopo: TPanel;
+    pnlRodape: TPanel;
+    pnlIIcone: TPanel;
+    Image1: TImage;
+    pnlBtnSair: TPanel;
+    btnSair: TSpeedButton;
+    pnlTitulo: TPanel;
+    Label1: TLabel;
+    procedure btnSairClick(Sender: TObject);
+    procedure pnlTopoMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadBase1: TFrmCadBase1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmCadBase1.btnSairClick(Sender: TObject);
+begin
+  inherited;
+  Self.Close;
+
+end;
+
+procedure TFrmCadBase1.FormMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+const
+   sc_DragMove = $f012;
+begin
+  inherited;
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
+
+end;
+
+end;
+
+procedure TFrmCadBase1.pnlTopoMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+
+const
+   sc_DragMove = $f012;
+begin
+  inherited;
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
+
+end;
+
+end.

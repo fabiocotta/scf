@@ -1,0 +1,26 @@
+unit UntCadCapela;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UntCadBase, Vcl.ExtCtrls;
+
+type
+  TFrmCadBase1 = class(TFrmCadBase)
+    pnlTopo: TPanel;
+    pnlRodape: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadBase1: TFrmCadBase1;
+
+implementation
+
+{$R *.dfm}
+
+end.
